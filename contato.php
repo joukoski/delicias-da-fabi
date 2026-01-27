@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Delicias da Fabi❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Fale Conosco</h1>
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="cardapio.php">Cardápio</a>
+        <a href="contato.php">Contato</a>
+    </nav>
+</header>
+
+<section class="contato">
+    <p>Faça seu pedido pelo WhatsApp</p>
+    <a class="btn" href="https://wa.me/55SEUNUMEROAQUI" target="_blank">
+        Chamar no WhatsApp
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Delicias da Fabi❤️</p>
+</footer>
+
+</body>
+</html>

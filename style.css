@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #faf7f2;
+    color: #4a2e1f;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;                 
+    justify-content: center;       /* centraliza todo o conteúdo horizontalmente */
+    align-items: center;           /* centraliza verticalmente */
+    padding: 20px;
+    gap: 100px;                     /* distância entre texto e logo */
+    height: auto;
+}
+
+.descricao-logo {
+    display: flex;                 
+    flex-direction: column;        
+    justify-content: center;       /* centraliza verticalmente em relação à logo */
+    align-items: center;            /* centraliza horizontalmente o texto */
+    color: #7a3e2d;           
+}
+
+.descricao-logo p {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;            
+}
+
+.logo {
+    max-height: 200px;             
+    width: auto;                   
+}
+
+.item-img {
+    width: 100%;           /* ocupa toda a largura do card */
+    height: 160px;         /* altura fixa para todas */
+    object-fit: cover;     /* mantém proporção e corta excesso se precisar */
+    border-radius: 8px;    /* opcional, deixa as bordas arredondadas */
+    margin-bottom: 10px;   /* separa do texto abaixo */
+}
+
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.hero h2 {
+    color: #7a3e2d;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    background: #7a3e2d;
+    color: #fff;
+    padding: 14px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #5c2d20;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background: #a8c3a0;
+    color: #2f4f2f;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* CARDÁPIO */
+.cardapio {
+    padding: 40px;
+    text-align: center;
+}
+
+.cardapio h2 {
+    margin-bottom: 30px;
+}
+
+.itens {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: #fff;
+    border: 1px solid #e0d6c3;
+    padding: 20px;
+    width: 240px;
+    border-radius: 12px;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* OPÇÕES */
+.opcao {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f3ead7;
+    border: 1px solid #c9b8a0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.opcao:hover {
+    background: #7a3e2d;
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    background: #f3ead7;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Botão "Escolher sabor" igual aos outros */
+.item a.btn {
+    background: #f3ead7;  /* mesma cor de fundo dos .opcao */
+    color: #4a2e1f;       /* mesma cor do texto */
+    padding: 10px;         /* igual aos outros botões */
+    border: 1px solid #c9b8a0;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;           /* ocupa toda a largura do card */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item a.btn:hover {
+    background: #7a3e2d;  /* mesma cor de hover dos .opcao */
+    color: #fff;
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .btn, .btn-secundario {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 15px;
+    }
+
+    .itens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+

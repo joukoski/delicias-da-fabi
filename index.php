@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias da Fabi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="descricao-logo">
+        <p>Bolos,<br> mini bolos, <br> potes da felicidade,<br> feijão tropeiro, <br> e massas.</p>
+    </div>
+    <img src="img/logo.png" alt="Delícias da Fabi" class="logo">
+</header>
+
+
+
+<section class="hero">
+    <h2>Sabor caseiro direto para sua casa❤️</h2>
+    
+    <a class="btn" href="https://wa.me/5541998766866?text=Ol%C3%A1%2C+vim+pelo+site+Del%C3%ADcias+da+Fabi+e+quero+fazer+um+pedido" target="_blank">
+        Pedir pelo WhatsApp
+    </a>
+
+    <br><br>
+    <a class="btn-secundario" href="carrinho.php">🛒 Ver Carrinho</a>
+</section>
+
+<section class="cardapio">
+    <h2>🍽️ Nosso Cardápio</h2>
+
+    <div class="itens">
+
+        <div class="item">
+            <h3>Feijão Tropeiro</h3>
+            <img src="img/feijao tropeiro.jpg" alt="Delícias da Fabi" class="item-img">
+            <p>Escolha a porção</p>
+
+            <button class="opcao" onclick="addCarrinho('tropeiro-simples', 'Tropeiro - Simples', 25)">
+            Simples – R$ 25,00
+            </button>
+
+            <button class="opcao" onclick="addCarrinho('tropeiro-familia', 'Tropeiro - Família', 45)">
+            Família – R$ 45,00
+            </button>
+        </div>
+
+        <div class="item">
+            <h3>Bolos Caseiros (mini)</h3>
+            <img src="img/mini bolo1.jpg" alt="Delícias da Fabi" class="item-img">
+            <p>Vários sabores</p>
+            <a class="btn" href="bolo.php">Escolher sabor</a>
+        </div>
+
+        <div class="item">
+            <h3>Copo da Felicidade</h3>
+            <img src="img/copo da felicidade.jpg" alt="Delícias da Fabi" class="item-img">
+            <p>Unidade</p>
+            <span class="preco">R$ 25,00</span>
+            <br><br>
+           <button class="opcao" onclick="addCarrinho('copo-felicidade', 'Copo da Felicidade', 25)">
+            Adicionar
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Delícias da Fabi</p>
+</footer>
+
+<script>
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+function addCarrinho(id, produto, preco) {
+    // procura o item pelo ID
+    let item = carrinho.find(i => i.id === id);
+
+    if (item) {
+        item.qtd += 1; // soma a quantidade
+    } else {
+        carrinho.push({ id, produto, preco, qtd: 1 });
+    }
+
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    alert(produto + " adicionado ao carrinho!");
+    console.log(carrinho); // útil para ver se está funcionando
+}
+
+
+</script>
+
+</body>
+</html>
