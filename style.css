@@ -360,77 +360,77 @@ footer {
         line-height: 1.4;
     }
     
-    /* Botões principais maiores */
+    /* Botões principais */
     .btn, .btn-secundario {
-        width: 92%;
-        max-width: 380px;
-        padding: 15px 22px;
-        font-size: 17px;
-        margin: 12px auto;
+        width: 90%;
+        max-width: 340px;
+        padding: 13px 20px;
+        font-size: 16px;
+        margin: 10px auto;
     }
     
-    /* PÁGINA DE BOLOS - Cards empilhados e maiores */
+    /* PÁGINA DE BOLOS - Cards empilhados */
     .cardapio {
         padding: 25px 10px;
     }
     
     .cardapio h2 {
-        font-size: 26px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
     
     .cardapio h3 {
-        font-size: 24px;
+        font-size: 22px;
         margin: 15px 0;
     }
     
-    /* Cards dos sabores MAIORES no mobile */
+    /* Cards dos sabores */
     .item {
-        width: 92%;
-        max-width: 380px;
-        padding: 25px 20px;
-        margin: 0 auto 20px;
+        width: 90%;
+        max-width: 340px;
+        padding: 20px 18px;
+        margin: 0 auto 18px;
     }
     
     .item h3 {
-        font-size: 24px;
-        margin-bottom: 12px;
+        font-size: 20px;
+        margin-bottom: 10px;
     }
     
     .item p {
-        font-size: 16px;
-        margin: 12px 0;
+        font-size: 15px;
+        margin: 10px 0;
     }
     
-    /* Imagens maiores */
+    /* Imagens */
     .item-img {
-        height: 200px;
-        margin-bottom: 15px;
+        height: 180px;
+        margin-bottom: 12px;
     }
     
-    /* Preços maiores e mais destacados */
+    /* Preços */
     .preco {
-        font-size: 24px;
-        margin: 18px 0;
+        font-size: 20px;
+        margin: 15px 0;
     }
     
-    /* Botões de opção MAIORES */
+    /* Botões de opção */
     .opcao {
-        padding: 15px;
-        font-size: 17px;
-        margin-top: 12px;
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 10px;
     }
     
     .item a.btn {
-        padding: 15px;
-        font-size: 17px;
+        padding: 12px;
+        font-size: 15px;
     }
     
-    /* PÁGINA DO CARRINHO - Lista melhorada */
+    /* PÁGINA DO CARRINHO - Lista equilibrada */
     #listaCarrinho {
-        width: 92%;
-        max-width: 380px;
-        padding: 25px 20px;
+        width: 90%;
+        max-width: 340px;
+        padding: 20px 18px;
         margin: 20px auto;
         background: #fff;
         border-radius: 12px;
@@ -438,12 +438,12 @@ footer {
     }
     
     #listaCarrinho p {
-        font-size: 18px;
-        padding: 20px 12px;
+        font-size: 16px;
+        padding: 16px 10px;
         flex-wrap: wrap;
-        gap: 12px;
-        line-height: 1.6;
-        border-bottom: 2px solid #e0d6c3;
+        gap: 10px;
+        line-height: 1.5;
+        border-bottom: 1px solid #e0d6c3;
     }
     
     #listaCarrinho p:last-child {
@@ -452,13 +452,13 @@ footer {
     
     .item-carrinho {
         flex: 1;
-        min-width: 200px;
+        min-width: 180px;
     }
     
     #listaCarrinho button {
-        padding: 12px 20px;
-        font-size: 16px;
-        margin-top: 8px;
+        padding: 10px 16px;
+        font-size: 14px;
+        margin-top: 6px;
         background: #7a3e2d;
         color: white;
         border: none;
@@ -472,8 +472,8 @@ footer {
     }
     
     #total {
-        font-size: 32px;
-        margin: 30px 0;
+        font-size: 26px;
+        margin: 25px 0;
         color: #7a3e2d;
         font-weight: bold;
     }
@@ -503,55 +503,57 @@ footer {
     }
     
     .btn, .btn-secundario {
-        width: 94%;
-        padding: 14px 20px;
-        font-size: 16px;
-    }
-    
-    .cardapio h2 {
-        font-size: 24px;
-    }
-    
-    .item {
-        width: 94%;
-        padding: 22px 18px;
-    }
-    
-    .item h3 {
-        font-size: 22px;
-    }
-    
-    .item p {
+        width: 92%;
+        padding: 12px 18px;
         font-size: 15px;
     }
     
-    .item-img {
-        height: 180px;
-    }
-    
-    .preco {
+    .cardapio h2 {
         font-size: 22px;
     }
     
+    .item {
+        width: 92%;
+        padding: 18px 15px;
+    }
+    
+    .item h3 {
+        font-size: 19px;
+    }
+    
+    .item p {
+        font-size: 14px;
+    }
+    
+    .item-img {
+        height: 160px;
+    }
+    
+    .preco {
+        font-size: 19px;
+    }
+    
     .opcao, .item a.btn {
-        padding: 14px;
-        font-size: 16px;
+        padding: 11px;
+        font-size: 14px;
     }
     
     #listaCarrinho {
-        width: 94%;
+        width: 92%;
+        padding: 18px 15px;
     }
     
     #listaCarrinho p {
-        font-size: 16px;
+        font-size: 15px;
+        padding: 14px 8px;
     }
     
     #listaCarrinho button {
-        font-size: 16px;
-        padding: 9px 16px;
+        font-size: 13px;
+        padding: 9px 14px;
     }
     
     #total {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
