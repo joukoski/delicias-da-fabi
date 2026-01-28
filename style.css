@@ -6,21 +6,21 @@ body {
 }
 
 /* HEADER */
-
 .header {
     display: flex;                 
-    justify-content: center;       /* centraliza todo o conteúdo horizontalmente */
-    align-items: center;           /* centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    gap: 100px;                     /* distância entre texto e logo */
+    gap: 100px;
     height: auto;
+    flex-wrap: wrap; /* permite quebrar em telas pequenas */
 }
 
 .descricao-logo {
     display: flex;                 
     flex-direction: column;        
-    justify-content: center;       /* centraliza verticalmente em relação à logo */
-    align-items: center;            /* centraliza horizontalmente o texto */
+    justify-content: center;
+    align-items: center;
     color: #7a3e2d;           
 }
 
@@ -36,13 +36,12 @@ body {
 }
 
 .item-img {
-    width: 100%;           /* ocupa toda a largura do card */
-    height: 160px;         /* altura fixa para todas */
-    object-fit: cover;     /* mantém proporção e corta excesso se precisar */
-    border-radius: 8px;    /* opcional, deixa as bordas arredondadas */
-    margin-bottom: 10px;   /* separa do texto abaixo */
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
-
 
 /* HERO */
 .hero {
@@ -82,7 +81,7 @@ body {
 
 /* CARDÁPIO */
 .cardapio {
-    padding: 40px;
+    padding: 40px 20px; /* reduzido padding lateral */
     text-align: center;
 }
 
@@ -137,58 +136,234 @@ footer {
 
 /* Botão "Escolher sabor" igual aos outros */
 .item a.btn {
-    background: #f3ead7;  /* mesma cor de fundo dos .opcao */
-    color: #4a2e1f;       /* mesma cor do texto */
-    padding: 10px;         /* igual aos outros botões */
+    background: #f3ead7;
+    color: #4a2e1f;
+    padding: 10px;
     border: 1px solid #c9b8a0;
     border-radius: 6px;
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    width: 100%;           /* ocupa toda a largura do card */
+    width: 100%;
     font-weight: bold;
     cursor: pointer;
 }
 
 .item a.btn:hover {
-    background: #7a3e2d;  /* mesma cor de hover dos .opcao */
+    background: #7a3e2d;
     color: #fff;
 }
 
-/* RESPONSIVIDADE MOBILE */
+/* ============================================ */
+/* RESPONSIVIDADE COMPLETA */
+/* ============================================ */
+
+/* Tablets e telas médias (768px ou menos) */
 @media (max-width: 768px) {
-
-    header {
+    .header {
         padding: 15px;
+        gap: 30px; /* reduz espaço entre logo e texto */
+        flex-direction: column; /* empilha verticalmente */
     }
-
+    
+    .descricao-logo p {
+        font-size: 18px;
+    }
+    
     .logo {
-        max-width: 150px;
+        max-height: 150px;
     }
-
+    
     .hero {
         padding: 30px 15px;
     }
-
+    
     .hero h2 {
         font-size: 22px;
+        line-height: 1.4;
     }
-
+    
     .btn, .btn-secundario {
         width: 100%;
         box-sizing: border-box;
         margin-top: 15px;
+        padding: 14px 20px;
     }
-
+    
+    .cardapio {
+        padding: 30px 15px;
+    }
+    
     .itens {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
-
+    
     .item {
         width: 100%;
         max-width: 320px;
     }
 }
 
+/* Celulares (480px ou menos) */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+    
+    .descricao-logo p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .logo {
+        max-height: 120px;
+    }
+    
+    .hero {
+        padding: 25px 15px;
+    }
+    
+    .hero h2 {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    
+    .btn, .btn-secundario {
+        font-size: 15px;
+        padding: 12px 18px;
+        margin-top: 10px;
+    }
+    
+    .cardapio {
+        padding: 25px 10px;
+    }
+    
+    .cardapio h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .itens {
+        gap: 15px;
+    }
+    
+    .item {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0 10px; /* margem lateral para não encostar nas bordas */
+    }
+    
+    .item h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .item p {
+        font-size: 14px;
+    }
+    
+    .item-img {
+        height: 180px;
+    }
+    
+    .preco {
+        font-size: 20px;
+        display: block;
+        margin: 15px 0;
+    }
+    
+    .opcao {
+        font-size: 15px;
+        padding: 12px;
+        margin-top: 8px;
+    }
+    
+    .item a.btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+    
+    footer {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
 
+/* Celulares muito pequenos (360px ou menos) */
+@media (max-width: 360px) {
+    .descricao-logo p {
+        font-size: 14px;
+    }
+    
+    .logo {
+        max-height: 100px;
+    }
+    
+    .hero h2 {
+        font-size: 18px;
+    }
+    
+    .btn, .btn-secundario {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    
+    .cardapio h2 {
+        font-size: 22px;
+    }
+    
+    .item {
+        margin: 0 5px;
+    }
+    
+    .item h3 {
+        font-size: 18px;
+    }
+    
+    .item-img {
+        height: 150px;
+    }
+    
+    .preco {
+        font-size: 18px;
+    }
+    
+    .opcao, .item a.btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Ajustes para o carrinho em mobile */
+@media (max-width: 768px) {
+    #listaCarrinho {
+        padding: 15px 10px;
+    }
+    
+    #listaCarrinho p {
+        font-size: 14px;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 0;
+        border-bottom: 1px solid #e0d6c3;
+    }
+    
+    #listaCarrinho button {
+        align-self: flex-end;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    #total {
+        font-size: 22px;
+        margin: 20px 0;
+    }
+}
