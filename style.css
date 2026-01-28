@@ -5,23 +5,22 @@ body {
     color: #4a2e1f;
 }
 
-/* ============================================ */
 /* HEADER */
-/* ============================================ */
+
 .header {
     display: flex;                 
-    justify-content: center;
-    align-items: center;
+    justify-content: center;       /* centraliza todo o conteúdo horizontalmente */
+    align-items: center;           /* centraliza verticalmente */
     padding: 20px;
-    gap: 100px;
+    gap: 100px;                     /* distância entre texto e logo */
     height: auto;
 }
 
 .descricao-logo {
     display: flex;                 
     flex-direction: column;        
-    justify-content: center;
-    align-items: center;
+    justify-content: center;       /* centraliza verticalmente em relação à logo */
+    align-items: center;            /* centraliza horizontalmente o texto */
     color: #7a3e2d;           
 }
 
@@ -33,13 +32,19 @@ body {
 
 .logo {
     max-height: 200px;             
-    width: auto;
-    max-width: 100%;
+    width: auto;                   
 }
 
-/* ============================================ */
-/* HERO SECTION */
-/* ============================================ */
+.item-img {
+    width: 100%;           /* ocupa toda a largura do card */
+    height: 160px;         /* altura fixa para todas */
+    object-fit: cover;     /* mantém proporção e corta excesso se precisar */
+    border-radius: 8px;    /* opcional, deixa as bordas arredondadas */
+    margin-bottom: 10px;   /* separa do texto abaixo */
+}
+
+
+/* HERO */
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -48,24 +53,17 @@ body {
 
 .hero h2 {
     color: #7a3e2d;
-    font-size: 28px;
-    margin-bottom: 25px;
 }
 
-/* ============================================ */
 /* BOTÕES */
-/* ============================================ */
 .btn {
     display: inline-block;
     background: #7a3e2d;
-    color: #fff !important;
+    color: #fff;
     padding: 14px 24px;
-    text-decoration: none !important;
+    text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
 }
 
 .btn:hover {
@@ -75,23 +73,14 @@ body {
 .btn-secundario {
     display: inline-block;
     background: #a8c3a0;
-    color: #2f4f2f !important;
+    color: #2f4f2f;
     padding: 12px 20px;
-    text-decoration: none !important;
+    text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
 }
 
-.btn-secundario:hover {
-    background: #8fb387;
-}
-
-/* ============================================ */
 /* CARDÁPIO */
-/* ============================================ */
 .cardapio {
     padding: 40px;
     text-align: center;
@@ -99,8 +88,6 @@ body {
 
 .cardapio h2 {
     margin-bottom: 30px;
-    color: #7a3e2d;
-    font-size: 32px;
 }
 
 .itens {
@@ -116,362 +103,91 @@ body {
     padding: 20px;
     width: 240px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.item h3 {
-    color: #7a3e2d;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.item p {
-    color: #666;
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-.item-img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
 }
 
 .preco {
     font-weight: bold;
-    font-size: 20px;
-    color: #7a3e2d;
-    display: block;
-    margin: 15px 0;
+    font-size: 18px;
 }
 
-/* ============================================ */
-/* BOTÕES DE OPÇÕES (dentro dos cards) */
-/* ============================================ */
+/* OPÇÕES */
 .opcao {
     width: 100%;
     margin-top: 10px;
-    padding: 12px;
+    padding: 10px;
     background: #f3ead7;
     border: 1px solid #c9b8a0;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 15px;
-    color: #4a2e1f;
-    transition: all 0.3s ease;
 }
 
 .opcao:hover {
     background: #7a3e2d;
     color: #fff;
-    transform: translateY(-2px);
 }
 
-/* ============================================ */
 /* FOOTER */
-/* ============================================ */
 footer {
     background: #f3ead7;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: #4a2e1f;
-}
-
-/* ============================================ */
-/* CARRINHO */
-/* ============================================ */
-#listaCarrinho {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-#listaCarrinho p {
     padding: 15px;
-    border-bottom: 1px solid #e0d6c3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 40px;
 }
 
-#listaCarrinho p:last-child {
-    border-bottom: none;
-}
-
-#listaCarrinho button {
-    background: #7a3e2d;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-#listaCarrinho button:hover {
-    background: #5c2d20;
-}
-
-#total {
+/* Botão "Escolher sabor" igual aos outros */
+.item a.btn {
+    background: #f3ead7;  /* mesma cor de fundo dos .opcao */
+    color: #4a2e1f;       /* mesma cor do texto */
+    padding: 10px;         /* igual aos outros botões */
+    border: 1px solid #c9b8a0;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
     text-align: center;
-    font-size: 28px;
-    color: #7a3e2d;
+    width: 100%;           /* ocupa toda a largura do card */
     font-weight: bold;
-    margin: 25px 0;
+    cursor: pointer;
 }
 
-/* ============================================ */
-/* RESPONSIVIDADE - TABLETS */
-/* ============================================ */
-@media (max-width: 900px) {
-    .header {
-        gap: 50px;
-        padding: 20px 15px;
-    }
-    
-    .descricao-logo p {
-        font-size: 20px;
-    }
-    
-    .logo {
-        max-height: 180px;
-    }
-    
-    .cardapio h2 {
-        font-size: 28px;
-    }
+.item a.btn:hover {
+    background: #7a3e2d;  /* mesma cor de hover dos .opcao */
+    color: #fff;
 }
 
+/* RESPONSIVIDADE MOBILE */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 25px;
-        padding: 20px 15px;
-    }
-    
-    .descricao-logo {
-        order: 2;
-    }
-    
-    .descricao-logo p {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-    
-    .logo {
-        order: 1;
-        max-height: 160px;
-        max-width: 80%;
-    }
-    
-    .hero {
-        padding: 35px 20px;
-    }
-    
-    .hero h2 {
-        font-size: 24px;
-    }
-    
-    .cardapio {
-        padding: 30px 20px;
-    }
-    
-    .cardapio h2 {
-        font-size: 26px;
-    }
-    
-    .itens {
-        gap: 20px;
-    }
-    
-    .item {
-        width: 260px;
-    }
-}
 
-/* ============================================ */
-/* RESPONSIVIDADE - CELULARES */
-/* ============================================ */
-@media (max-width: 600px) {
-    .header {
-        padding: 15px 10px;
-        gap: 20px;
+    header {
+        padding: 15px;
     }
-    
-    .descricao-logo p {
-        font-size: 16px;
-    }
-    
+
     .logo {
-        max-height: 140px;
-        max-width: 70%;
+        max-width: 150px;
     }
-    
+
     .hero {
         padding: 30px 15px;
     }
-    
+
     .hero h2 {
-        font-size: 20px;
-        line-height: 1.4;
-        margin-bottom: 20px;
+        font-size: 22px;
     }
-    
+
     .btn, .btn-secundario {
-        display: block;
-        width: 85%;
-        max-width: 320px;
-        margin: 10px auto;
-        padding: 13px 20px;
+        width: 100%;
         box-sizing: border-box;
+        margin-top: 15px;
     }
-    
-    .cardapio {
-        padding: 25px 15px;
-    }
-    
-    .cardapio h2 {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-    
+
     .itens {
         flex-direction: column;
         align-items: center;
-        gap: 18px;
     }
-    
+
     .item {
-        width: 85%;
+        width: 100%;
         max-width: 320px;
     }
-    
-    .item-img {
-        height: 180px;
-    }
-    
-    .opcao {
-        padding: 12px;
-        font-size: 15px;
-    }
-    
-    #listaCarrinho {
-        width: 85%;
-        padding: 15px;
-    }
-    
-    #listaCarrinho p {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        font-size: 14px;
-    }
-    
-    #total {
-        font-size: 24px;
-    }
 }
 
-/* ============================================ */
-/* RESPONSIVIDADE - CELULARES PEQUENOS */
-/* ============================================ */
-@media (max-width: 400px) {
-    .header {
-        padding: 12px 8px;
-        gap: 15px;
-    }
-    
-    .descricao-logo p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    
-    .logo {
-        max-height: 120px;
-        max-width: 65%;
-    }
-    
-    .hero {
-        padding: 25px 12px;
-    }
-    
-    .hero h2 {
-        font-size: 18px;
-    }
-    
-    .btn, .btn-secundario {
-        width: 90%;
-        padding: 12px 18px;
-        font-size: 14px;
-    }
-    
-    .cardapio {
-        padding: 20px 12px;
-    }
-    
-    .cardapio h2 {
-        font-size: 22px;
-    }
-    
-    .item {
-        width: 90%;
-        padding: 18px 15px;
-    }
-    
-    .item h3 {
-        font-size: 20px;
-    }
-    
-    .item-img {
-        height: 160px;
-    }
-    
-    .preco {
-        font-size: 18px;
-    }
-    
-    .opcao {
-        padding: 11px;
-        font-size: 14px;
-    }
-    
-    footer {
-        padding: 15px 12px;
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 350px) {
-    .logo {
-        max-height: 100px;
-        max-width: 60%;
-    }
-    
-    .descricao-logo p {
-        font-size: 13px;
-    }
-    
-    .hero h2 {
-        font-size: 16px;
-    }
-    
-    .btn, .btn-secundario {
-        padding: 10px 15px;
-        font-size: 13px;
-    }
-    
-    .item {
-        width: 92%;
-    }
-    
-    .item-img {
-        height: 140px;
-    }
-}
