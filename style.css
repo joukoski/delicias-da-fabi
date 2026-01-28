@@ -95,6 +95,15 @@ body {
 .btn-secundario:hover {
     background: #8fb387;
 }
+/* Botão WhatsApp - Verde chamativo */
+.btn-whatsapp {
+    background: #25D366 !important;
+    color: #fff !important;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851 !important;
+}
 
 /* ============================================ */
 /* CARDÁPIO */
@@ -557,3 +566,4 @@ footer {
         font-size: 24px;
     }
 }
+
